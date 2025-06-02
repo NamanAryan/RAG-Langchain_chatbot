@@ -8,10 +8,10 @@ llm = GeminiLLM()
 
 class Query(BaseModel):
     question: str
-    
+
 @app.get("/")
 async def root():
-    return {"message": "Welcome to the LLM API. Use the /ask endpoint to ask questions."}
+    return {"message": "Welcome to the LLM Page. Use the /ask endpoint to ask questions."}
 
 @app.post("/ask")
 async def ask_question(query: Query):
